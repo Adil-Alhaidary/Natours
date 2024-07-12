@@ -36,17 +36,17 @@ body {
     clip-path: polygon(0% 0% , 100% 0% , 100% 75vh , 0%  100%);
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 40px;
     left: 40px;
 }
 
-.logo {
+.header__logo {
     height: 35px ;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     /* we used position absolute so that we can change the position of the element without affecting the parent element
     the parent element should have position relative in order for this to work. */
@@ -66,7 +66,7 @@ body {
     margin-bottom:  60px;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 60px;
     font-weight: 400;
@@ -82,7 +82,7 @@ body {
 
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
@@ -161,7 +161,7 @@ you wanted to change overtime. you can use opacity & transform ..
 
 }
 
-.btn-white {
+.btn--white {
     color: #777;
     background-color:#fff ;
 }
@@ -181,7 +181,7 @@ you wanted to change overtime. you can use opacity & transform ..
 
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -190,7 +190,7 @@ you wanted to change overtime. you can use opacity & transform ..
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out 0.75s;
     animation-fill-mode: backwards;
     /* it will automatically applies the styles of 0% before the animation start */
