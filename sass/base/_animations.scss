@@ -1,0 +1,46 @@
+
+/* 
+The keyframes are used to make animations in css, they are the same as webflow animation function. you initialize an animation by writing 
+its name in front of the @keyframes and then you specify at which point you want the animation to start. then you select the property that 
+you wanted to change overtime. you can use opacity & transform ..
+ */
+ @keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

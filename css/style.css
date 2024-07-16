@@ -1,92 +1,3 @@
-/* Colors
-
-light green: #7ed56f;
-medium green: #55c57a;
-dark green: #28b485 */
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box;
-}
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  position: absolute;
-  /* we used position absolute so that we can change the position of the element without affecting the parent element
-  the parent element should have position relative in order for this to work. */
-  top: 40%;
-  left: 50%;
-  /* these positions are in relation to the parent element */
-  transform: translate(-50%, -50%);
-  /* this tranform property is actually in relation to the same element */
-  text-align: center;
-  /* this is to align the button to the center of the box */
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-}
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* you specify animation-name on the desired element that you wanted to be affected */
-  /* 
-      animation-delay: 3s; 
-      animation-iteration-count: 3;
-  */
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
 /* 
 The keyframes are used to make animations in css, they are the same as webflow animation function. you initialize an animation by writing 
 its name in front of the @keyframes and then you specify at which point you want the animation to start. then you select the property that 
@@ -128,8 +39,60 @@ you wanted to change overtime. you can use opacity & transform ..
     transform: translateY(0);
   }
 }
-.btn:link,
-.btn:visited {
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* you specify animation-name on the desired element that you wanted to be affected */
+  /* 
+      animation-delay: 3s; 
+      animation-iteration-count: 3;
+  */
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -140,22 +103,25 @@ you wanted to change overtime. you can use opacity & transform ..
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .btn--white {
   color: #777;
   background-color: #fff;
 }
-
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -169,20 +135,39 @@ you wanted to change overtime. you can use opacity & transform ..
   transition: all 0.4s;
   /* transition should be on the initial state */
 }
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
   /* it will automatically applies the styles of 0% before the animation start */
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+.header__text-box {
+  position: absolute;
+  /* we used position absolute so that we can change the position of the element without affecting the parent element
+  the parent element should have position relative in order for this to work. */
+  top: 40%;
+  left: 50%;
+  /* these positions are in relation to the parent element */
+  transform: translate(-50%, -50%);
+  /* this tranform property is actually in relation to the same element */
+  text-align: center;
+  /* this is to align the button to the center of the box */
 }
 
 /*# sourceMappingURL=style.css.map */
