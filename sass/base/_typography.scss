@@ -1,47 +1,72 @@
-
 body {
-    font-family: "lato", sans-serif;
-    font-weight: 400;
-    // font-size: 16px;
-    line-height: 1.7;
-    color: $color-grey-dark;
-    padding: 3rem ;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  // font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
 }
 
-
-
-
-
-
-
 .heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    margin-bottom:  6rem;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
 
-    &--main {
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        animation-name: moveInLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        /* you specify animation-name on the desired element that you wanted to be affected */
-        /* 
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* you specify animation-name on the desired element that you wanted to be affected */
+    /* 
             animation-delay: 3s; 
             animation-iteration-count: 3;
         */
-    
-    }
-    
-    &--sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.75rem;
-        animation-name: moveInRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  display: inline-block; // this is in order to remove the unwanted space with the block property
+  -webkit-background-clip: text; // this is to clip the gradient to the text shape only
+  color: transparent; // this is to make the text transparent in order the show the gradient behind
+  transition: all 0.2s;
+  letter-spacing: 2px;
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }

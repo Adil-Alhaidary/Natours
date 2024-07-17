@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -12,7 +11,6 @@
   // we can select things based on their class so the '^'
   //sign indicate the things that start with keywords that you want to apply
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
