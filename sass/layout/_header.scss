@@ -1,34 +1,37 @@
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, 
-    rgba($color-primary-light, 0.801),
-    rgba($color-primary-dark, 0.801)), 
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.801),
+      rgba($color-primary-dark, 0.801)
+    ),
     url(../img/hero.jpg);
-    background-size: cover ;
-    background-position: top ;
-    position: relative; 
+  background-size: cover;
+  background-position: top;
+  position: relative;
 
-    clip-path: polygon(0% 0% , 100% 0% , 100% 75vh , 0%  100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
 
-    &__logo-box{
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-    &__logo {
-        height: 3.5rem;
-    }
-    
-    &__text-box {
-        position: absolute;
-        /* we used position absolute so that we can change the position of the element without affecting the parent element
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    /* we used position absolute so that we can change the position of the element without affecting the parent element
         the parent element should have position relative in order for this to work. */
-        top:40%;
-        left: 50%;
-        /* these positions are in relation to the parent element */
-        transform: translate(-50%, -50%);
-        /* this tranform property is actually in relation to the same element */
-        text-align: center;
-        /* this is to align the button to the center of the box */
-    }
+    top: 40%;
+    left: 50%;
+    /* these positions are in relation to the parent element */
+    transform: translate(-50%, -50%);
+    /* this tranform property is actually in relation to the same element */
+    text-align: center;
+    /* this is to align the button to the center of the box */
+  }
 }
